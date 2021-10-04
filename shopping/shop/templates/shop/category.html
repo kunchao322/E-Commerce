@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block metadescription %}
+    {% if category %}
+        {{category.description|truncatewords:155}}
+    {% else %} 
+        Welcome!
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+    {% if category %}
+        {{category.name}} - Grocery store
+    {% else %}
+        See our produces!
+    {% endif %}
+{% endblock title %}
+
+{% block content %}
+    {% if category %}
+        <div>  
+            <div>  
+                <p><a href  ="{% url "shop:allProdCat" %}"> All Items </a> | {{category.name}} </p>
+            </div>
+        </div>
+    {% endif %}
+
+    <div>
+    {% if category %}
+        <img src = "{{category.image.url}}" alt = "{{category.name}}">
+    </div>
+    <br>
+    <div>
+        <h1> {{category.name}} </h1>
+        <p> {{category.description}}</p>
+    </div>
+    {% else %}
+        <img src = "{% static 'img/logo.png' %}" alt = "Our product collections">
+     </div>   
+    <br>
+    <div>
+        <h1>Product collections</h1>
+        <p> All product info from Amazon fresh. </p>
+    </div>
+    {% endif %}
+    <div>
+        <div>
+            {% for product in products %}
+                <p> All product info from Amazon fresh. </p>
+                <div>
+                    <div>
+                        <a href = ""><img src = "{{product.image.url}}" alt = "{{product.name}}"></a>
+                        <div>
+                            <h4>{{product.name}}</h4>
+                            <p>${{product.price}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
