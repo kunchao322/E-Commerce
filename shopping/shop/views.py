@@ -23,5 +23,5 @@ def allProdCat(request, c_slug = None):
         products = Product.objects.filter(Category=c_page,available = True)
     else:
         products = Product.objects.all().filter(available = True)
-    return render(request, 'shop/category.html', {'category':c_page, 'product':products}) #pass a dictionary
+    return render(request, 'shop/category.html', {'category':c_page, 'products':products}) #pass a dictionary
  
