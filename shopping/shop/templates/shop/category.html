@@ -26,17 +26,17 @@
         </div>
     {% endif %}
 
-    <div>
+    <div class = "mx-auto"> 
     {% if category %}
-        <img src = "{{category.image.url}}" alt = "{{category.name}}">
+        <img class = "my_image" src = "{{category.image.url}}" alt = "{{category.name}}">
     </div>
     <br>
     <div>
-        <h1> {{category.name}} </h1>
-        <p> {{category.description}}</p>
+        <h1 class = "text-center my_title"> {{category.name}} </h1>
+        <p class = "text-justify"> {{category.description}}</p>
     </div>
     {% else %}
-        <img src = "{% static 'img/logo.png' %}" alt = "Our product collections">
+        {% comment %} <img src = "{% static 'img/logo.png' %}" alt = "Our product collections"> {% endcomment %}
      </div>   
     <br>
     <div>
@@ -48,11 +48,12 @@
         <div>
             {% for product in products %}
                 <div>
-                    <div>
-                        <a href = ""><img src = "{{product.image.url}}" alt = "{{product.name}}"></a>
+                    <div class = "img1">
+                        <a href = ""><img class = "my_image"  src = "{{product.image.url}}" alt = "{{product.name}}"></a>
                         <div>
-                            <h4>{{product.name}}</h4>
+                            <h6>{{product.name}}</h6>
                             <p>${{product.price}}</p>
+                            <br>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,22 @@
+.nav-item {
+    letter-spacing: .2em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.my_image {
+    width: 100px;
+    height: auto
+}
+
+.my_title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
