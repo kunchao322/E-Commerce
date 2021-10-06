@@ -3,6 +3,7 @@ This is a project for cloud computing.  <br />
 Django and Python used for web deveopment in MVC design pattern. Shoppoing and Cart modules are created.
 
 # Quickstart
+Clone repo locally, then enter shopping folder.<br />
 $ python3 manage.py runserve. <br />
 Then navigate http://127.0.0.1:8000/shop for website sketch.
 
