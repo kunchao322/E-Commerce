@@ -4,7 +4,7 @@ Django and Python used for web deveopment in MVC design pattern. Shoppoing and C
 
 # Quickstart
 Clone repo locally, then enter shopping folder.<br />
-$ python3 manage.py runserve. <br />
+$ python3 manage.py runserver. <br />
 Then navigate http://127.0.0.1:8000/shop for website sketch.
 
 ## Shopping view
