@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # make template file availale to the app
-        'DIRS': [os.path.join(BASE_DIR, 'shop', 'templates/'), ],
+        'DIRS': [os.path.join(BASE_DIR, 'shop', 'templates/'), os.path.join(BASE_DIR, 'cart', 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -37,7 +37,7 @@
           {% if product.stock <= 0 %} 
           <p><b>Out of Stock</b></p> 
           {% else %}
-          <a href = "{{product.get_url}}"> Add To Cart </a>
+							<a class="btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add to Cart</a>
           {% endif %}
         </div>
       </div>
@@ -45,15 +45,5 @@
   </div>
 </div>
 {% endblock %}
-
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
 
 

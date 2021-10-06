@@ -2,7 +2,6 @@ from django.db.models.fields import files
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 
-from shopping.settings import AUTH_PASSWORD_VALIDATORS
 from .models import Category, Product
 
 # Create your views here.
