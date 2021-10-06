@@ -10,6 +10,38 @@
     text-transform: uppercase;
 }
 
+
+/**footer***/
+
+.my_footer p {
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.my_image_padding {
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+
+
+/**Category Page***/
+
+.my_row_class {
+    padding-top: 15px;
+}
+
+.my_row_class .mx_auto p {
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.my_row_class .mx_auto p a {
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+}
+
 .my_image {
     width: 100px;
     height: auto
@@ -19,4 +51,12 @@
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: .2em;
+}
+
+.my_bottom_margin {
+    margin-bottom: 10px;
+}
+
+.card-body h6 {
+    font-size: 14px;
 }

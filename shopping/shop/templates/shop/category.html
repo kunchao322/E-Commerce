@@ -40,19 +40,29 @@
      </div>   
     <br>
     <div>
-        <h1>Product collections</h1>
-        <p> All product info from Amazon fresh. </p>
+        <h1 class = 'text-center my_title'>Product collections</h1>
+        <p class = 'text-center'> All product info from Amazon fresh. </p>
     </div>
     {% endif %}
-    <div>
-        <div>
+
+    <div class = "container">
+        <div class = ="row mx-auto">
             {% for product in products %}
-                <div>
-                    <div class = "img1">
-                        <a href = ""><img class = "my_image"  src = "{{product.image.url}}" alt = "{{product.name}}"></a>
-                        <div>
+                <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md12 col-lg-4">
+                    <div class="card text-center" style="min-width: 18rem;">"
+                        {% comment %} <a href = ""><img class = "my_image my_image_padding"  src = "{{product.image.url}}" alt = "{{product.name}}"></a> {% endcomment %}
+                        <a href = ""><img class = "my_image card-img-top "  src = "{{product.image.url}}" alt = "{{product.name}}"></a>
+
+                        <div class = 'card-body'>
                             <h6>{{product.name}}</h6>
                             <p>${{product.price}}</p>
+                             {% comment %} <p>Desciption</p>
+                                <p>{{product.description}}</p> {% endcomment %}
+                                {% if product.stock <= 0 %} 
+                                <p><b>Out of Stock</b></p> 
+                                {% else %}
+                                <a href = "{{product.get_url}}"> Add To Cart </a>
+                                {% endif %}
                             <br>
                         </div>
                     </div>
